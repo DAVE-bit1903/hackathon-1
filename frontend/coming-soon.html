@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logicra Pro — Coming Soon</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <polygon points="10,2 18,7 18,13 10,18 2,13 2,7" stroke="url(#csnav)" stroke-width="1.4" fill="none"/>
+            <circle cx="10" cy="10" r="2.5" fill="url(#csnav2)"/>
+            <defs>
+              <linearGradient id="csnav" x1="2" y1="2" x2="18" y2="18"><stop stop-color="#a78bfa"/><stop offset="1" stop-color="#3b82f6"/></linearGradient>
+              <radialGradient id="csnav2"><stop stop-color="#c4b5fd"/><stop offset="1" stop-color="#60a5fa"/></radialGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="logo-text">Logicra</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="coming-soon-page">
+    <div class="bg-mesh"></div>
+    <div class="cs-content">
+      <div class="cs-badge">
+        <span class="badge-dot"></span>
+        In development
+      </div>
+      <div class="cs-logo-big">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+          <polygon points="32,6 58,22 58,42 32,58 6,42 6,22" stroke="url(#cs-g)" stroke-width="2" fill="none"/>
+          <polygon points="32,14 50,24 50,40 32,50 14,40 14,24" stroke="url(#cs-g)" stroke-width="1" fill="none" opacity="0.4"/>
+          <circle cx="32" cy="32" r="8" fill="url(#cs-g2)"/>
+          <defs>
+            <linearGradient id="cs-g" x1="6" y1="6" x2="58" y2="58"><stop stop-color="#a78bfa"/><stop offset="1" stop-color="#3b82f6"/></linearGradient>
+            <radialGradient id="cs-g2" cx="50%" cy="50%" r="50%"><stop stop-color="#c4b5fd"/><stop offset="1" stop-color="#60a5fa"/></radialGradient>
+          </defs>
+        </svg>
+      </div>
+      <h1 class="cs-title">Logicra Pro</h1>
+      <p class="cs-sub">Something extraordinary is being built.</p>
+      <p class="cs-desc">Pro unlocks unlimited deep research, priority AI processing, advanced PDF analysis, and collaborative workspaces. We're putting the finishing touches on it — join the waitlist to be first in line.</p>
+
+      <div class="cs-waitlist">
+        <input type="email" class="cs-email-input" placeholder="your@email.com" id="csEmailInput" />
+        <button class="cs-join-btn" id="csJoinBtn">Join Waitlist</button>
+      </div>
+      <p class="cs-joined hidden" id="csJoined">🎉 You're on the list! We'll email you when Pro launches.</p>
+
+      <div class="cs-features">
+        <div class="cs-feature">
+          <div class="cs-feat-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="#a78bfa" stroke-width="1.3"/><path d="M10 6v4l3 3" stroke="#a78bfa" stroke-width="1.3" stroke-linecap="round"/></svg>
+          </div>
+          <div class="cs-feat-text">
+            <strong>Deep Research Mode</strong>
+            <span>Multi-step reasoning across dozens of sources</span>
+          </div>
+        </div>
+        <div class="cs-feature">
+          <div class="cs-feat-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="2" width="10" height="14" rx="2" stroke="#60a5fa" stroke-width="1.3"/><path d="M6 7h6M6 10h6M6 13h4" stroke="#60a5fa" stroke-width="1.1" stroke-linecap="round"/></svg>
+          </div>
+          <div class="cs-feat-text">
+            <strong>Unlimited PDF Analysis</strong>
+            <span>Chat with any document up to 50MB</span>
+          </div>
+        </div>
+        <div class="cs-feature">
+          <div class="cs-feat-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 3L3 7v6l7 4 7-4V7l-7-4z" stroke="#c084fc" stroke-width="1.3"/></svg>
+          </div>
+          <div class="cs-feat-text">
+            <strong>Priority Processing</strong>
+            <span>Skip the queue with dedicated compute</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="index.html" class="cs-back">← Back to Logicra</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <span>© 2025 Logicra</span>
+    <span class="footer-sep">·</span>
+    <a href="#">Privacy</a>
+    <span class="footer-sep">·</span>
+    <a href="#">Terms</a>
+  </footer>
+
+  <script>
+    document.getElementById('csJoinBtn').addEventListener('click', () => {
+      const val = document.getElementById('csEmailInput').value.trim();
+      if (!val || !val.includes('@')) { document.getElementById('csEmailInput').style.borderColor = '#f87171'; return; }
+      document.getElementById('csEmailInput').style.borderColor = '';
+      document.querySelector('.cs-waitlist').classList.add('hidden');
+      document.getElementById('csJoined').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
