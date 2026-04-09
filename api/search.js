@@ -4,7 +4,7 @@ const { GoogleGenAI } = require("@google/genai");
 // 🔑 API Keys (use Vercel Environment Variables in production)
 const TAVILY_API_KEY = process.env.TAVILY_API_KEY || "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";
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "AIzaSyApQo_Z6uImKKb82wk15tAoH4I1knBTv7E";
-const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
+const ai = new GoogleGenAI({ apiKey: AIzaSyApQo_Z6uImKKb82wk15tAoH4I1knBTv7E });
 
 module.exports = async function handler(req, res) {
   // Enable CORS
